@@ -1,0 +1,6 @@
+.settings/
+bin/com
+.classpath
+.project
+*.zip
+*.txt
