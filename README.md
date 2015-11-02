@@ -1,6 +1,8 @@
 # java-server
 
-#Tech notes:
+---------------------------------------------------------
+Tech notes:
+---------------------------------------------------------
 
 - Java version 7 and Eclipse JUNO (4.2.2)
 - Eclipse may throw restriction access errors regarding 'com.sun.net.httpserver.HttpServer' because some JVM's don't support it.
@@ -16,7 +18,9 @@
   - httpcore-4.3.2
   - httpmime-4.3.4
 
-#Design notes:
+---------------------------------------------------------
+Design notes:
+---------------------------------------------------------
 
 - Login does not delete old session keys. That means several session keys might be valid at the same time for the same user.
   Instead, there is another specific thread to clean old sessions from time to time.
@@ -33,7 +37,9 @@
 - Post actions are done using a queue, so the server can execute the actions if there is time.
   Several properties like queue size, pool size, etc can be configured according to each server.
 
-#Structure notes:
+---------------------------------------------------------
+Structure notes:
+---------------------------------------------------------
 
 - Configuration: com.acerete
   - Properties file with some configurations like host, port and other game values. 
